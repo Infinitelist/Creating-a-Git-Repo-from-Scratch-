@@ -1,7 +1,9 @@
 /* Rutherford Labbe: 01-31-2024 */
 
+// Generates a random number between 1 - 3
 let randomInteger = Math.floor(Math.random() * 3) + 1;
 
+// Displays quote depending on the number generated
 function randomQuoteGenerator(num){
     if(num === 1){
         console.log(" \"If you only knew the magnificence of the 3, 6 and 9, then you would have the key to the universe.\" " + "- Nikola Tesla");
@@ -12,6 +14,7 @@ function randomQuoteGenerator(num){
     }
 }
 
+// Pass the random number generated into the function
 randomQuoteGenerator(randomInteger);
 
-console.log("The random number is " + randomInteger);
+//console.log("The random number is " + randomInteger);
