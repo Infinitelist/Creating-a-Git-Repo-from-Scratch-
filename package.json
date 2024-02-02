@@ -1,7 +1,7 @@
 {
   "name": "creating-a-git-repo-from-scratch-",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"If you only knew the magnificence of the 3, 6 and 9, then you would have the key to the universe.\"                 - Nikola Tesla",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,5 +9,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type":"module"
+  "type": "module"
 }
