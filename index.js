@@ -3,10 +3,7 @@
 // Require file 'exercises.js'
 import {func1, func2, func3, func4} from "./exercises.js";
 
-console.log(func1);
-console.log(func2);
-console.log(func3);
-console.log(func4);
+console.log(func1, func3, func4);
 
 /* ---------------------------------------- Section Divider --------------------------------------- */
 
