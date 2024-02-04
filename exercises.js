@@ -68,24 +68,40 @@ loop(3, n => n > 0, n => n - 1, console.log);
 
 /* ---------------------------- Section Divider ----------------------------- */
 
-function everyLoop(array, test)
-{
-  // Your code here.
+function everyLoop(array, test){
 
-  
+  // Iterate through an array to determine if a statement is true or false
+  for(let i = 0; i < array.length; i++){
+    // If the statement (is not true or false) return false
+    if(!test(array[i])){
+        return false;
+    }
+  }
+  // Else return true
+  return true;
 }
 
-function everySome(array, test)
-{
-// Your code here.
+function everySome(array, test){
+    // The some method iterates through the array of elements - returns true if one instance is true
+    // Each element is pass through an anonymous function
+    // Each element is pass through another function called test
+    // If the test function (is not true or false) than it returns false
+    // If the test function (is not false or true) than it returns true
+    return !array.some(element => !test(element));
 }
 
-console.log(everyLoop([1, 3, 5], n => n < 10));
+//console.log(everyLoop([1, 3, 5], n => n < 10));
 // → true
 console.log(everyLoop([2, 4, 16], n => n < 10));
 // → false
-console.log(everyLoop([], n => n < 10));
+//console.log(everyLoop([], n => n < 10));
 // → true
 
+//console.log(everySome([1, 3, 5], n => n < 10));
+// → true
+//console.log(everySome([2, 4, 16], n => n < 10));
+// → false
+console.log(everySome([], n => n < 10));
+// → true
 
 /* ---------------------------- Section Divider ----------------------------- */
