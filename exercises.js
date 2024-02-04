@@ -32,13 +32,12 @@ let arrays = [[1, 2, 3], [4, 5], [6]];
 // Your code here.
 
 // Using reduce to flatten the array using the reduce and concat method + the spread operator
-const flattenArray = arrays.reduce(function(accumulator, currentArray) {
+let flattenArray = arrays.reduce(function(accumulator, currentArray) {
     return accumulator.concat(...currentArray);
   }, []);
 
-// Print result on console
-console.log(flattenArray);
-
+// Hold the result
+let func1 = flattenArray;
 
 
 /* ---------------------------- Section Divider ----------------------------- */
@@ -63,7 +62,7 @@ function loop(value, testFunction, updateFunction, bodyFunction) {
 }
 
 // Pass a number, first function, second function, and a third function (console.log)
-loop(3, n => n > 0, n => n - 1, console.log);
+let func2 = loop(3, n => n > 0, n => n - 1, console.log);
 
 
 /* ---------------------------- Section Divider ----------------------------- */
@@ -92,7 +91,7 @@ function everySome(array, test){
 
 //console.log(everyLoop([1, 3, 5], n => n < 10));
 // → true
-console.log(everyLoop([2, 4, 16], n => n < 10));
+let func3 = everyLoop([2, 4, 16], n => n < 10);
 // → false
 //console.log(everyLoop([], n => n < 10));
 // → true
@@ -101,7 +100,10 @@ console.log(everyLoop([2, 4, 16], n => n < 10));
 // → true
 //console.log(everySome([2, 4, 16], n => n < 10));
 // → false
-console.log(everySome([], n => n < 10));
+let func4 = everySome([], n => n < 10);
 // → true
 
 /* ---------------------------- Section Divider ----------------------------- */
+
+// Exporting functions
+export{ func1, func2, func3, func4 };
