@@ -31,7 +31,7 @@ let arrays = [[1, 2, 3], [4, 5], [6]];
 
 // Your code here.
 
-// Using reduce to flatten the array using the reduce and concat method
+// Using reduce to flatten the array using the reduce and concat method + the spread operator
 const flattenArray = arrays.reduce(function(accumulator, currentArray) {
     return accumulator.concat(...currentArray);
   }, []);
@@ -47,28 +47,32 @@ console.log(flattenArray);
 
 // Your code here.
 
+// Pass a number, first function, second function, and a third function (console.log)
 function loop(value, testFunction, updateFunction, bodyFunction) {
 
+    // Start with the upper bound and decrement down by 1
     for(let i = value; i > 0; i--){
+        // Pass the value through the function (A simple comparison - is the value greater than zero)
         testFunction(value);
+        // Pass the value through the function (console.log(value))
         bodyFunction(value);
+        // Pass the value through the function (Takes the value and substract 1 from it - overwrite value with this new value)
         value = updateFunction(value);
     }
 
 }
 
+// Pass a number, first function, second function, and a third function (console.log)
 loop(3, n => n > 0, n => n - 1, console.log);
-// → 3
-// → 2
-// → 1
-
 
 
 /* ---------------------------- Section Divider ----------------------------- */
 
-/*function everyLoop(array, test)
+function everyLoop(array, test)
 {
   // Your code here.
+
+  
 }
 
 function everySome(array, test)
@@ -82,6 +86,6 @@ console.log(everyLoop([2, 4, 16], n => n < 10));
 // → false
 console.log(everyLoop([], n => n < 10));
 // → true
-*/
+
 
 /* ---------------------------- Section Divider ----------------------------- */
